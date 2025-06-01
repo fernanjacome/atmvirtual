@@ -1,0 +1,54 @@
+.card-container {
+  position: absolute;
+  top: 49%;
+  left: 19%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: inset 0px 10px 6px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card-extracted {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+  animation: cardBounce 1.2s ease-in-out infinite;
+}
+
+.card-inserted {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+  animation: cardInsert 0.6s ease-in-out forwards;
+}
+
+.card-ejecting {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+  animation: cardEject 0.6s ease-out forwards;
+}
+
+/* Animations */
+@keyframes cardBounce {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes cardInsert {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-150px); }
+}
+
+@keyframes cardEject {
+  from { transform: translateY(-150px); }
+  to   { transform: translateY(0px); }
+}

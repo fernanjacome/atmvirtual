@@ -1,0 +1,94 @@
+.pinpad {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 120px; /* columna 4 más ancha */
+  grid-template-rows: repeat(4, 80px); /* cuadrados */
+  gap: 12px;
+background-color: #2c2c2c;
+  padding: 24px;
+  border-radius: 16px;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: max-content;
+  z-index: 10;
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+}
+.button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1c1c1c;
+  background: linear-gradient(
+    145deg,
+    #7a7a7a 0%,
+    #8a8a8a 30%,
+    #8a8a8a 50%,
+    #7a7a7a 70%,
+    #3e3e3e 100%
+  );
+  border: 1px solid #5e5e5e;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 1px #ffffff88,
+    inset 0 -3px 6px #00000088,
+    0 3px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease-in-out, background 0.2s;
+  white-space: nowrap;
+  padding: 0;
+  position: relative;
+}
+
+/* Colores por franja superior (estilo discreto y moderno) */
+.cancel::before,
+.enter::before,
+.clear::before,
+.help::before,
+.back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.button:active {
+  animation: pressEffect 0.2s ease-in-out;
+}
+
+
+/* Líneas de color */
+.cancel::before { background-color: rgb(112, 16, 16)}
+.enter::before  { background-color: #2e7d32; }
+.clear::before  { background-color: #cf9a14; }
+.help::before   { background-color: #075c8a; }
+
+@keyframes pressEffect {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      inset 0 1px 1px #ffffff88,
+      inset 0 -3px 6px #00000088,
+      0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(0.94);
+    box-shadow:
+      inset 0 0 2px #000000aa,
+      0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow:
+      inset 0 1px 1px #ffffff88,
+      inset 0 -3px 6px #00000088,
+      0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+}

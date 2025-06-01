@@ -1,0 +1,73 @@
+.atm-screen-frame {
+  position: absolute;
+  width: 1050px;
+  height: 600px;
+  top: 4%;
+  left: 3%;
+  z-index: 0;
+}
+
+/* Frame interior de la pantalla (pantalla del cajero) */
+.atm-screen.idle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #1a2d45, #0f1c2e);
+  box-shadow:
+    inset 0 0 60px rgba(0, 0, 0, 0.5),
+    inset 0 4px 6px rgba(255, 255, 255, 0.05),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* CONTENIDO */
+.idle-content {
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.brand {
+  width: 200px;
+  filter: drop-shadow( 0 0 8px rgba(255, 255, 255, 0.2))
+}
+
+.tagline {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #c3cbe0;
+}
+
+.glow-bar {
+  margin-top: 40px;
+  width: 280px;
+  height: 6px;
+  background: linear-gradient(to right, #6f8df8, #49e3ff);
+  border-radius: 3px;
+  animation: glow 2s infinite ease-in-out;
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.4);
+}
+
+/* ANIMACIONES */
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
