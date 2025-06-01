@@ -9,6 +9,7 @@ const ATMScreen: React.FC = () => {
       <img
         src="/components/pantalla.png"
         alt="ATM Background Frame"
+        
         style={{
           top: "-14%",
           left: "0%",

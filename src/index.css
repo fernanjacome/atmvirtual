@@ -20,6 +20,8 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   drag: none;
+   animation: fadeInImage 0.8s ease-out forwards;
+  animation-delay: 0.3s;
 }
 .nodrag, [class*="bg-"], [style*="background-image"] {
   user-select: none;
@@ -31,4 +33,16 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-drag: none;
+}
+
+.fade-image {
+  opacity: 0;
+  animation: fadeInImage 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
 }
