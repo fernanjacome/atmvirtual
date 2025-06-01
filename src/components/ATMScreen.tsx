@@ -1,10 +1,8 @@
 // src/components/ATMScreen.tsx
-import React, { useState } from "react";
+import React from "react";
 import "./ATMScreen.css";
 
 const ATMScreen: React.FC = () => {
-  const [pin, setPin] = useState("");
-  const [pan, setPan] = useState("");
 
   return (
     <div className="atm-screen-frame">
