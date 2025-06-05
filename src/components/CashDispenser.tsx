@@ -1,12 +1,12 @@
 // src/components/CashDispenser.tsx
 import React from "react";
-
+import "./CashDispenser.css";
 const CashDispenser: React.FC = () => {
   return (
     <img
-      src="/components/receitp.png"
+      src="/components/receitp.webp"
       alt="Cash Dispenser"
-      style={{ bottom: "-12%", left: "10%", width: "800px", position: "absolute", userSelect: "none" }}
+      className="cashdispenser"
     />
   );
 };

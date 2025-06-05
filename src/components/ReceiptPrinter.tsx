@@ -4,9 +4,9 @@ import React from "react";
 const ReceiptPrinter: React.FC = () => {
   return (
     <img
-      src="/components/receitp.png"
+      src="/components/receitp.webp"
       alt="Receipt Printer"
-       style={{ width: "300px", userSelect: "none" }}
+      style={{ width: "300px", userSelect: "none" }}
     />
   );
 };
